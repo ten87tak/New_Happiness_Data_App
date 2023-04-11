@@ -19,26 +19,24 @@ st.write("")
 st.subheader(f"{x_choice} and {y_choice}")
 
 
-match x_choice:
-    case "GDP":
-        x_axis = df["gdp"]
+if x_choice == "GDP":
+    x_axis = df["gdp"]
 
-    case "Happiness":
-        x_axis = df["happiness"]
+elif x_choice == "Happiness":
+    x_axis = df["happiness"]
 
-    case "Generosity":
-        x_axis = df["generosity"]
+elif x_choice == "Generosity":
+    x_axis = df["generosity"]
 
 
-match y_choice:
-    case "GDP":
-        y_axis = df["gdp"]
+if y_choice == "GDP":
+    y_axis = df["gdp"]
 
-    case "Happiness":
-        y_axis = df["happiness"]
+elif y_choice == "Happiness":
+    y_axis = df["happiness"]
 
-    case "Generosity":
-        y_axis = df["generosity"]
+elif y_choice == "Generosity":
+    y_axis = df["generosity"]
 
 
 figure = px.scatter(x=x_axis, y=y_axis, labels={"x": x_choice, "y": y_choice})
